@@ -1,4 +1,4 @@
-import java.awt.Graphics2D;
+    import java.awt.Graphics2D;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -7,8 +7,32 @@ import java.awt.Color;
 import javax.imageio.ImageIO;
 
 
+
 public class transfo {
+
     
+public static boolean verifyFile(String s) {
+    String ds = new String();
+     ds += s.charAt(s.length()-4);
+     ds += s.charAt(s.length()-3);
+     ds += s.charAt(s.length()-2);
+     ds += s.charAt(s.length()-1);
+
+
+    if (ds.equals(".png") || ds.equals(".jpg") || ds.equals(".bmp")) {
+        System.out.println("File is a "+ds);
+        return true;
+
+    }
+    else {
+        System.out.println("File is not a png, jpg or bmp, it is a "+ds);
+        return false;
+    }
+
+}
+
+
+
       
     public static void monochrome(String fileName, String newFile) throws IOException {
 
@@ -27,6 +51,7 @@ public class transfo {
         File output = new File(newFile+"monochrome.png");
         ImageIO.write(result, "png", output);
     
+        System.out.println("Monochrome image created");
     
     }
     
@@ -44,6 +69,8 @@ public class transfo {
         graphics.drawImage(orginalImage, 0, 0, null);
     
         ImageIO.write(blackAndWhiteImg, "png", new File(newFile+"bwg.png"));
+
+        System.out.println("Black and white image created");
     }
     
 }

@@ -11,8 +11,12 @@ public class BlackWhite {
     String fileName = args[0];
     String newFile = args[1];
     
-    transfo.monochrome(fileName, newFile);
-    transfo.bwg(fileName, newFile);
+    if(transfo.verifyFile(fileName)){
+      transfo.monochrome(fileName, newFile);
+      transfo.bwg(fileName, newFile);
+    }
+    
+    
      
   }
 
