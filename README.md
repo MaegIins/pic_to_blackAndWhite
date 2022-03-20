@@ -17,6 +17,6 @@ For the nodes
 ``java Noeud <ServerIP> [port]``
 
 For the client
-``java Client "Path of the pic" <ServerIP> [port]
+``java Client "Path of the pic" <ServerIP> [port]``
 
 -------------------------------------------------------------
